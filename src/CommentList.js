@@ -1,14 +1,19 @@
-import React, {useState} from 'react'
+import axios from 'axios'
+import React, {useEffect, useState} from 'react'
 import Comment from './Comment'
 
 export default function CommentList() {
-    const [comments, setComments] = useState([
-        { name: "JB", message: "Youhou la famille!"},
-        { name: "Kirikou", message: "Je ne suis pas grand mais je suis vaillant"}
-    ])
+    const [comments, setComments] = useState([])
+
+    useEffect(() => {
+        axios.get('https://jsonplaceholder.typicode.com/comments')
+        .then(res => {
+            setComments(res.data)
+        })
+    }, [])
 
     const commentsJSX = comments.map(comment => {
-        return <Comment name={comment.name} message={comment.message} />
+        return <Comment name={comment.name} body={comment.body} />
     })
 
     /* 

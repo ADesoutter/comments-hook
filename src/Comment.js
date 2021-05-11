@@ -1,10 +1,10 @@
 import React, {useState} from 'react'
 
-export default function Comment({name, message}) {
+export default function Comment({name, body}) {
     return (
         <li>
             <strong>{name}</strong> <br/>
-            {message}
+            {body}
         </li>
     )
 }
