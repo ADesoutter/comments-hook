@@ -1,14 +1,16 @@
-import React, { Component } from 'react';
+import React from 'react';
 import './App.css';
+import Comments from './Comments';
+import Counter from './Counter';
 
-export default class App extends Component {
-  render() {
+export default function App() {
     return (
-      <div className="App">
-        
+      <div className="App container">
+        {/* <Comments /> */}
+
+        <Counter />
       </div>
     );
-  }
 }
 
 
