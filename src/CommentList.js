@@ -1,19 +1,28 @@
-import React from 'react'
+import React, {useState} from 'react'
 import Comment from './Comment'
 
-/*
-comments: [
-{ name: "JB", message: "Youhou la famille!"},
-{ name: "Kirikou", message: "Je ne suis pas grand mais je suis vaillant"}
-]
-*/
 export default function CommentList() {
+    const [comments, setComments] = useState([
+        { name: "JB", message: "Youhou la famille!"},
+        { name: "Kirikou", message: "Je ne suis pas grand mais je suis vaillant"}
+    ])
+
+    const commentsJSX = comments.map(comment => {
+        return <Comment name={comment.name} message={comment.message} />
+    })
+
+    /* 
+    commentsJSX, dedans y aura: 
+    <Comment name="JB" message="Youhou la famille!" />
+    <Comment name="Kirikou" message="Je ne suis pas grand mais je suis vaillant" />
+    */
+
+
     return (
         <div>        
-            <h1 className="title">Liste des commentaires (0)</h1>
+            <h1 className="title">Liste des commentaires ({comments.length})</h1>
             <ul className="comment-list">
-                <Comment/>
-                <Comment/>
+                {commentsJSX}
             </ul>           
         </div>
     )

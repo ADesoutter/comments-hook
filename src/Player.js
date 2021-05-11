@@ -1,6 +1,6 @@
 import React from 'react'
 
-// props ->
+// Composant tuto pour les props ->
 /*
 {
     firstname: "jean-michel",

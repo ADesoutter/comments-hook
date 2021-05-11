@@ -1,5 +1,7 @@
 import React, {useState} from 'react'
 
+// Composant tuto pour les states 
+
 export default function Counter() {
     /*
     bachi: afficher la valeur de l'état
