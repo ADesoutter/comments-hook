@@ -28,7 +28,8 @@ export default function Comments() {
                     <CommentForm comments={comments} setComments={setComments} />
                 </div>
                 <div className="column">
-                    <CommentList isAdmin={isAdmin} comments={comments} />
+                    <CommentList isAdmin={isAdmin} comments={comments} 
+                        setComments={setComments} />
                 </div>
             </div>   
         </div>
