@@ -13,12 +13,7 @@ export default function App() {
 
     return (
       <div className="App container">
-        {/* <Comments /> */}
-
-        <Counter score={score} incrementScore={incrementScore} />
-        <Counter score={score} incrementScore={incrementScore} />
-        <Counter  score={score} incrementScore={incrementScore} />
-
+        <Comments />
       </div>
     );
 }

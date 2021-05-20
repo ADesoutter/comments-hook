@@ -1,10 +1,13 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import './Comment.css';
 
-export default function Comment({name, body}) {
+export default function Comment({name, body, isAdmin}) {
     return (
         <li>
-            <strong>{name}</strong> <br/>
-            {body}
+            <strong>{name}</strong> 
+            {isAdmin ? <button className="delete"></button> : null}
+            <br/>
+            {body} 
         </li>
     )
 }

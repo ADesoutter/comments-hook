@@ -1,13 +1,8 @@
 import React, { useState } from 'react'
 import './AdminMode.css'
 
-export default function AdminMode() {
-    const [isAdmin, setIsAdmin] = useState(false)
-
-    const toggleAdminMode = () => {
-        // isAdmin ? setIsAdmin(false) : setIsAdmin(true);
-        setIsAdmin(!isAdmin);
-    }
+export default function AdminMode({isAdmin, toggleAdminMode}) {
+    
 
     return (
         <div className="admin-mode"> 

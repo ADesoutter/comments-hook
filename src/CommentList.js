@@ -2,7 +2,7 @@ import axios from 'axios'
 import React, {useEffect, useState} from 'react'
 import Comment from './Comment'
 
-export default function CommentList() {
+export default function CommentList({isAdmin}) {
     const [comments, setComments] = useState([])
 
     useEffect(() => {
@@ -13,7 +13,7 @@ export default function CommentList() {
     }, [])
 
     const commentsJSX = comments.map(comment => {
-        return <Comment name={comment.name} body={comment.body} />
+        return <Comment name={comment.name} body={comment.body} isAdmin={isAdmin} />
     })
 
     /* 
