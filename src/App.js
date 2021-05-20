@@ -2,6 +2,7 @@ import React, {useState} from 'react';
 import './App.css';
 import Comments from './Comments';
 import Counter from './Counter';
+import Form from './Form';
 
 export default function App() {
 
@@ -13,7 +14,8 @@ export default function App() {
 
     return (
       <div className="App container">
-        <Comments />
+        {/* <Comments /> */}
+        <Form />
       </div>
     );
 }
