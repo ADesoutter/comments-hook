@@ -9,10 +9,10 @@ export default function Comments() {
     const [comments, setComments] = useState([])
 
     useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/comments')
-        .then(res => {
-            setComments(res.data)
-        })
+        // axios.get('https://jsonplaceholder.typicode.com/comments')
+        // .then(res => {
+        //     setComments(res.data)
+        // })
     }, [])
 
     const toggleAdminMode = () => {

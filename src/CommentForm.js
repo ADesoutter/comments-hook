@@ -1,4 +1,5 @@
-import React, {useState} from 'react'
+import React, {useState} from 'react';
+import { v4 as uuidv4 } from 'uuid';
 
 export default function CommentForm({comments, setComments}) {
     const [name, setName] = useState("");
@@ -7,10 +8,10 @@ export default function CommentForm({comments, setComments}) {
     const getFormData = (e) => {
       e.preventDefault();
       let newComment = {
+        id: uuidv4(),
         name: name,
         body: msg
       }
-      
 
       //let arr = [2,45,17];
       //let arr2 = [...arr, 35]; // [2,45,17,35]
