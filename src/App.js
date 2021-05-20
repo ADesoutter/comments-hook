@@ -1,18 +1,24 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import Comments from './Comments';
-import Player from './Player';
-import ChuckNorrisFact from './ChuckNorrisFact';
+import Counter from './Counter';
 
 export default function App() {
+
+    const [score, setScore] = useState(0);
+
+    const incrementScore = () => {
+        setScore(score+1);
+    }
+
     return (
       <div className="App container">
-        <Comments />
+        {/* <Comments /> */}
 
-        {/* <ChuckNorrisFact /> */}
-        {/*  <Player firstname="Jean-Michel" lastname="Apeupré"
-         />
-        <Player firstname="Ju" lastname="Das" /> */}
+        <Counter score={score} incrementScore={incrementScore} />
+        <Counter score={score} incrementScore={incrementScore} />
+        <Counter  score={score} incrementScore={incrementScore} />
+
       </div>
     );
 }
