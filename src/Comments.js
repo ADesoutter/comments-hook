@@ -25,7 +25,7 @@ export default function Comments() {
             <AdminMode isAdmin={isAdmin} toggleAdminMode={toggleAdminMode} />
             <div className="columns">
                 <div className="column">
-                    <CommentForm comments={comments} />
+                    <CommentForm comments={comments} setComments={setComments} />
                 </div>
                 <div className="column">
                     <CommentList isAdmin={isAdmin} comments={comments} />
