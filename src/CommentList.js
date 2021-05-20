@@ -2,15 +2,7 @@ import axios from 'axios'
 import React, {useEffect, useState} from 'react'
 import Comment from './Comment'
 
-export default function CommentList({isAdmin}) {
-    const [comments, setComments] = useState([])
-
-    useEffect(() => {
-        axios.get('https://jsonplaceholder.typicode.com/comments')
-        .then(res => {
-            setComments(res.data)
-        })
-    }, [])
+export default function CommentList({isAdmin, comments}) {
 
     const commentsJSX = comments.map(comment => {
         return <Comment name={comment.name} body={comment.body} isAdmin={isAdmin} />

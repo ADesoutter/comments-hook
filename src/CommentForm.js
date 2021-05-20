@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function CommentForm() {
+export default function CommentForm({comments}) {
     return (
         <div>
             <h1 className="title">Ajouter un commentaire</h1>
